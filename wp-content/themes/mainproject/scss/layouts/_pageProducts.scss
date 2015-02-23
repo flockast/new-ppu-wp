@@ -1,0 +1,33 @@
+.pageProducts {
+	@include make-row();
+	.oneProduct {
+		@include make-xs-column(4);
+		@media (max-width: $screen-md-max) {
+			@include make-xs-column(6);
+		}
+		padding-top: 40px;
+		padding-bottom: 40px;
+		border-bottom: 1px solid silver;
+		transition: .3s;
+		.productImage {
+			height: 180px;
+			overflow: hidden;
+			text-align: center;
+			img{
+				@include img-responsive();
+				margin: 0 auto;
+			}
+		}
+		.productTitle {
+			margin-top: 20px;
+			text-align: center;
+			font-size: 18px;
+			& > a {
+				color: #222;
+			}
+		}
+		&:hover {
+			background: #dfdfdf;
+		}
+	}
+}

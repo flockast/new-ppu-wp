@@ -1,0 +1,15 @@
+.pageSlider {
+	display: none;
+	position: relative;
+	padding:60px 0;
+	background: url(../img/parket-2.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	.logotype {
+		background: url(../img/logotype-sp-black-256x320.png);
+		width: 256px;
+		height: 320px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

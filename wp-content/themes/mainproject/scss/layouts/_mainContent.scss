@@ -1,0 +1,60 @@
+.mainContent {
+	@include make-sm-column(8);
+	@media (max-width: $screen-sm-max) {
+		margin-bottom: 120px;
+	}
+	.listPosts {
+		@include make-row();
+		font-size: 0;
+		.onePost {
+			width: 50%;
+			padding-left: 15px;
+			padding-right: 15px;
+			display: inline-block;
+			vertical-align: top;
+			margin-bottom: 60px;
+			font-size: 14px;
+			@media (max-width: $screen-sm-max) {
+				width: 100%;
+			}
+			.photo {
+				display: block;
+				cursor: pointer;
+				& > img {
+					width: 100%;
+				}
+				&:hover {
+					& + .title {
+						text-decoration: none;
+					}
+				}
+			}
+			.title {
+				display: block;
+				margin: 20px 0;
+				font-weight: bold;
+				color: #333;
+				font-size: 18px;
+				text-decoration: underline;
+				cursor: pointer;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+			.date {
+				border-top: 1px solid silver;
+				margin-top: 15px;
+				padding-top: 8px;
+				color: #919191;
+			}
+		}
+		.buttonMore {
+			margin: 0 auto;
+			display: block;
+			width: 180px;
+		}
+	}
+	.bottomPagenation {
+		text-align: center;
+	}
+}

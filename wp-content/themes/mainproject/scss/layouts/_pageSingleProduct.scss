@@ -1,0 +1,32 @@
+.pageSingleProduct {
+	@include make-row();
+	.productImage {
+		@include make-xs-column(5);
+	}
+	.productDescription {
+		@include make-xs-column(7);
+	}
+	@media (max-width: $screen-sm-max) {
+		.productImage {
+			@include make-xs-column(12);
+			margin-bottom: 40px;
+		}
+		.productDescription {
+			@include make-xs-column(12);
+		}
+	}
+	.price {
+		font-size: 18px;
+		.old {
+			font-size: 15px;
+			text-decoration: line-through;
+			color: #d9534f;
+		}
+		.new {
+			color: #5cb85c;
+		}
+	}
+	.buttonBuy {
+		margin-top: 20px;
+	}
+}

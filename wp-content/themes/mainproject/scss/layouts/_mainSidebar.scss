@@ -1,0 +1,80 @@
+.mainSidebar {
+	@include make-sm-column(4);
+	& > div {
+		margin-bottom: 40px;
+	}
+	.searchBlock {
+		.inputBlock {
+			@include make-xs-column(8);
+			i {
+				position: absolute;
+				top: 9px;
+				right: 25px;
+				color: #ccc;
+				transition: .2s;
+			}
+			input {
+				padding-right: 30px;
+			}
+			input:focus + i{
+				color:#5A5A5A;
+			}
+		}
+		.buttonBlock {
+			@include make-xs-column(4, 0);
+		}
+	}
+	.tagsBlock {
+		margin-left: -6px;
+		margin-right: -6px;
+		a {
+			display: -moz-inline-stack;
+       	 	display: inline-block;
+       	 	*display: inline;
+       	 	margin: 0 6px 6px;
+			padding: 2px 5px;
+			border: 1px solid #B3B3B3;
+			border-radius: 3px;
+			color: #222;
+			font-weight: bold;
+			&:hover {
+				text-decoration: none;
+				background: #C5C5C5;
+				color: #fff;
+			}
+		}
+	}
+	.mainNews {
+		.oneNew {
+			@include make-row();
+			margin-bottom: 20px;
+			margin-top: 20px;			
+			.leftSide {
+				@include make-xs-column(3);
+				.photo {
+					display: block;
+					& > img {
+						width: 100%;
+					}
+				}
+			}
+			.rightSide {
+				@include make-xs-column(9, 0);
+				.title {
+					display: block;
+					padding-bottom: 12px;
+					margin-bottom: 5px;
+					color: #333;
+					font-weight: bold;
+					font-size: 16px;
+					line-height: 17px;
+					border-bottom: 1px solid silver;
+					cursor: pointer;
+				}
+				.date {
+					color: #919191;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,51 @@
+.otherPosts {
+	.onePost {
+		@include make-sm-column(6);
+		@include make-xs-column(12);
+		margin-bottom: 20px;
+		& > a {
+			display: block;
+			position: relative;
+		}
+		.postImage > img {
+			width: 100%;
+		}
+		.postTitle {
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			display: none;
+			padding: 20px;
+			background-color: transparent;
+			color: #fff;
+			font-size: 18px;
+		}
+		h4 {
+			text-align: center;
+		}
+		&:hover .postTitle {
+			display: block;
+			background-color: rgba(0,0,0,.5);
+		}
+		&.next .postTitle:before, &.prev .postTitle:before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			display: block;
+			width:48px;
+			height: 48px;
+			margin-top: - 24px;
+			margin-left: - 24px;
+			background: url(../img/slider-arrows.png);
+			content: " ";
+		}
+		&.next .postTitle:before {
+			background-position: -48px -48px;	
+		}
+		&.prev .postTitle:before {
+			background-position: 0px -48px;	
+		}
+	}
+}

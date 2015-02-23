@@ -1,0 +1,47 @@
+body {
+	padding: 70px 0 0 0;
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+}
+.pageWrapper {
+    min-height: 100%;
+    margin-bottom: -59px;
+}
+* html .pageWrapper {
+    height: 100%;
+}
+.pageBuffer {
+	height: 59px;
+}
+
+.topTitle {
+	margin-top: 0;
+	margin-bottom: 22px;
+}
+.simpleTitle {
+	position: relative;
+	text-align: center;
+	margin: 60px 0;
+	& > span {
+		position: relative;
+		z-index: 3;
+		padding:0 20px;
+		background: #fff;
+	}
+	&:before {
+		position: absolute;
+		z-index: 2;
+		left: 0;
+		right: 0;
+		top: 50%;
+		display: block;
+		height: 1px;
+		width: 420px;
+		margin:0 auto;
+		background-color: #ccc;
+		content:" ";
+	}
+}
