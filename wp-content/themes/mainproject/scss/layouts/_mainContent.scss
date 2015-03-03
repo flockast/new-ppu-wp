@@ -14,6 +14,11 @@
 			vertical-align: top;
 			margin-bottom: 60px;
 			font-size: 14px;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			&:hover {
+				background: #F0F0F0;
+			}
 			@media (max-width: $screen-sm-max) {
 				width: 100%;
 			}
@@ -22,11 +27,6 @@
 				cursor: pointer;
 				& > img {
 					width: 100%;
-				}
-				&:hover {
-					& + .title {
-						text-decoration: none;
-					}
 				}
 			}
 			.title {
@@ -46,6 +46,9 @@
 				margin-top: 15px;
 				padding-top: 8px;
 				color: #919191;
+			}
+			.desc {
+				line-height: 23px;
 			}
 		}
 		.buttonMore {

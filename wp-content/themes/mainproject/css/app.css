@@ -5835,7 +5835,11 @@ html, body {
       display: inline-block;
       vertical-align: top;
       margin-bottom: 60px;
-      font-size: 14px; }
+      font-size: 14px;
+      padding-top: 15px;
+      padding-bottom: 15px; }
+      .mainContent .listPosts .onePost:hover {
+        background: #F0F0F0; }
       @media (max-width: 991px) {
         .mainContent .listPosts .onePost {
           width: 100%; } }
@@ -5844,8 +5848,6 @@ html, body {
         cursor: pointer; }
         .mainContent .listPosts .onePost .photo > img {
           width: 100%; }
-        .mainContent .listPosts .onePost .photo:hover + .title {
-          text-decoration: none; }
       .mainContent .listPosts .onePost .title {
         display: block;
         margin: 20px 0;
@@ -5861,6 +5863,8 @@ html, body {
         margin-top: 15px;
         padding-top: 8px;
         color: #919191; }
+      .mainContent .listPosts .onePost .desc {
+        line-height: 23px; }
     .mainContent .listPosts .buttonMore {
       margin: 0 auto;
       display: block;
@@ -5940,7 +5944,8 @@ html, body {
       .mainSidebar .mainNews .oneNew .leftSide .photo {
         display: block; }
         .mainSidebar .mainNews .oneNew .leftSide .photo > img {
-          width: 100%; }
+          width: 100%;
+          height: auto; }
     .mainSidebar .mainNews .oneNew .rightSide {
       position: relative;
       float: left;

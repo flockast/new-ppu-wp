@@ -24,10 +24,16 @@
     <![endif]-->
 
     <?php wp_head(); ?>
+
+    <?php if(current_user_can('manage_options')): ?>
+      <style>
+        .pageWrapper .navbar { margin-top: 32px; }
+      </style>
+    <?php endif; ?>
   </head>
   <body>
     <div class="pageWrapper">
-      <nav class="navbar navbar-inverse navbar-fixed-top">
+      <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
