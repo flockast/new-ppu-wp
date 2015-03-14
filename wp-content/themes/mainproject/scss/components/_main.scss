@@ -1,5 +1,5 @@
 body {
-	padding: 70px 0 0 0;
+	padding: 51px 0 0 0;
 }
 
 html, body {
@@ -45,3 +45,9 @@ html, body {
 		content:" ";
 	}
 }
+h2 {
+	margin: 0 0 40px;
+}
+.alignright { float: right; margin: 20px 0 20px 20px !important;}
+.alignleft { float: left; margin: 20px 20px 20px 0 !important;}
+.aligncenter { display: block; margin: 20px auto !important;}

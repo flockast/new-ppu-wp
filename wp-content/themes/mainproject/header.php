@@ -23,11 +23,24 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <?php if ( is_user_logged_in() && current_user_can('administrator') ): ?>
+
+    <style>
+      body {
+        padding-top: 102px;
+      }
+      .navbar {
+        margin-top: 32px;
+      }
+    </style>
+
+    <?php endif; ?>
+
     <?php wp_head(); ?>
   </head>
   <body>
     <div class="pageWrapper">
-      <nav class="navbar navbar-inverse navbar-fixed-top">
+      <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">

@@ -21,31 +21,25 @@
 </div>
 <div class="mainNews">
   <h2>Главные новости</h2>
-  <div class="oneNew">
-    <div class="leftSide">
-      <a href="#" class="photo"><img src="img/content/small-new.jpg" alt="New"></a>
+  <?php
+    $posts = get_posts( array(
+      'post_type'       => 'post',
+       'meta_query'     => array(
+          'key'   => 'show_in_sidebar',
+          'value' => true
+        )
+    ) );
+    foreach($posts as $post): setup_postdata($post); ?>
+    <div class="oneNew">
+      <div class="leftSide">
+        <a href="<?php the_permalink(); ?>" class="photo">
+          <?php echo get_the_post_thumbnail( $post->ID, 'thumbnail' ); ?>
+        </a>
+      </div>
+      <div class="rightSide">
+        <a href="<?php the_permalink(); ?>" class="title"><?php echo $post->post_title; ?></a>
+        <div class="date"><?php echo get_the_date('d.m.Y', $post->ID); ?></div>
+      </div>
     </div>
-    <div class="rightSide">
-      <a class="title">Новая интересная новость главная, очень интересная</a>
-      <div class="date">20.02.2015</div>
-    </div>
-  </div>
-  <div class="oneNew">
-    <div class="leftSide">
-      <a href="#" class="photo"><img src="img/content/small-new.jpg" alt="New"></a>
-    </div>
-    <div class="rightSide">
-      <a class="title">Новая интересная новость главная, очень интересная</a>
-      <div class="date">20.02.2015</div>
-    </div>
-  </div>
-  <div class="oneNew">
-    <div class="leftSide">
-      <a href="#" class="photo"><img src="img/content/small-new.jpg" alt="New"></a>
-    </div>
-    <div class="rightSide">
-      <a class="title">Новая интересная новость главная, очень интересная</a>
-      <div class="date">20.02.2015</div>
-    </div>
-  </div>
+    <?php endforeach; wp_reset_postdata(); ?>
 </div>

@@ -4,10 +4,9 @@
 
 	<div class="contentCarousel">
     <div id="carousel">
-      <div><img src="http://placehold.it/750x300&text=1" alt=""></div>
-      <div><img src="http://placehold.it/750x300&text=2" alt=""></div>
-      <div><img src="http://placehold.it/750x300&text=3" alt=""></div>
-      <div><img src="http://placehold.it/750x300&text=4" alt=""></div>
+      <div><img src="<?php theme_url(); ?>/img/content/top-slider1.jpg" alt=""></div>
+      <div><img src="<?php theme_url(); ?>/img/content/top-slider2.jpg" alt=""></div>
+      <div><img src="<?php theme_url(); ?>/img/content/top-slider3.jpg" alt=""></div>
     </div>
   </div>
 
@@ -24,7 +23,7 @@
 	<?php if (have_posts()): ?>
 		<div class="listPosts">
 			<?php while (have_posts()): the_post(); ?>
-				<?php get_template_part('article', 'category'); ?>
+				<?php get_template_part('templates/articles/article', 'category'); ?>
     	<?php endwhile; ?>
 		</div>
  <?php endif; ?>
