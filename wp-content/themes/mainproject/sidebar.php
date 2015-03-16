@@ -20,15 +20,17 @@
 	?>
 </div>
 <div class="mainNews">
-  <h2>Главные новости</h2>
+  <h2>Рекомендуем</h2>
   <?php
-    $posts = get_posts( array(
-      'post_type'       => 'post',
-       'meta_query'     => array(
-          'key'   => 'show_in_sidebar',
-          'value' => true
+    $posts = get_posts(array(
+      'meta_query' => array(
+        array(
+          'key' => 'show_in_sidebar',
+          'value' => '1',
+          'compare' => '=='
         )
-    ) );
+      )
+    ));
     foreach($posts as $post): setup_postdata($post); ?>
     <div class="oneNew">
       <div class="leftSide">
@@ -38,7 +40,7 @@
       </div>
       <div class="rightSide">
         <a href="<?php the_permalink(); ?>" class="title"><?php echo $post->post_title; ?></a>
-        <div class="date"><?php echo get_the_date('d.m.Y', $post->ID); ?></div>
+        <div class="date"><i class="fa fa-calendar-o"></i> <?php echo get_the_time('d.m.Y', $post->ID); ?></div>
       </div>
     </div>
     <?php endforeach; wp_reset_postdata(); ?>

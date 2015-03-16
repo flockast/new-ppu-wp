@@ -1,4 +1,6 @@
 .mainSidebar {
+	padding-top: 15px;
+	background: url(../img/stripe_bg.png);
 	@include make-sm-column(4);
 	& > div {
 		margin-bottom: 40px;
@@ -48,7 +50,10 @@
 		.oneNew {
 			@include make-row();
 			margin-bottom: 20px;
-			margin-top: 20px;			
+			margin-top: 20px;
+			&:hover .rightSide .date {
+				color: #666;
+			}		
 			.leftSide {
 				@include make-xs-column(3);
 				.photo {
@@ -56,6 +61,7 @@
 					& > img {
 						width: 100%;
 						height: auto;
+						border-radius: 50%;
 					}
 				}
 			}
@@ -64,16 +70,18 @@
 				.title {
 					display: block;
 					padding-bottom: 12px;
-					margin-bottom: 5px;
 					color: #333;
-					font-weight: bold;
-					font-size: 16px;
-					line-height: 17px;
-					border-bottom: 1px solid silver;
+					font-size: 14px;
+					line-height: 22px;
 					cursor: pointer;
+					&:hover {
+						text-decoration: none;
+					}
 				}
 				.date {
-					color: #919191;
+					font-size: 11px;
+					font-weight: bold;
+					color: #e5e5e5;
 				}
 			}
 		}

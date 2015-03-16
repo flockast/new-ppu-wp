@@ -12,7 +12,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:image" content="<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ); ?>" />
     <meta property="og:url" content="<?php the_permalink(); ?>" />
-    <meta property="og:description" content="<?php the_field('post_lead'); ?>" />   
+    <meta property="og:description" content="<?php the_field('short_story'); ?>" />   
 
     <?php endif; ?>    
 
@@ -40,7 +40,7 @@
   </head>
   <body>
     <div class="pageWrapper">
-      <nav class="navbar navbar-default navbar-fixed-top">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -49,7 +49,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Строительный портал</a>
+            <a class="navbar-brand" href="#">Рецепты Строительства</a>
           </div>
 
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -67,6 +67,7 @@
       <div class="pageSlider">
         <div class="logotype"></div>
       </div>
+
 			<section class="pageContent">
 				<div class="container">
 				  <div class="row">

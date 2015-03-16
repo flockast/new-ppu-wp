@@ -1,4 +1,7 @@
 .pageContacts {
+	.simpleTitle {
+		margin-top: 60px;
+	}
 	.ourContacts {
 		@include make-xs-column(5);
 	}

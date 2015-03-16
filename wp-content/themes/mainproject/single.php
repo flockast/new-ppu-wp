@@ -5,19 +5,19 @@
     <div class="singlePost">
       <div class="singleHeader">
         <div class="singleImage"><?php echo get_the_post_thumbnail(); ?></div>
-        <h2 class="singleTitle"><?php the_title(); ?></h2>
+        <h1 class="singleTitle"><?php the_title(); ?></h1>
         <div class="singlePreview"><?php the_field("short_story"); ?></div>
-        <a href="#" class="previewClose" id="previewClose">Скрыть</a>
+        <a href="#" class="previewClose" id="previewClose"><i class="fa fa-eye-slash"></i> <span>Скрыть</span></a>
       </div>
       <div class="singleContent">
         <?php the_content(); ?>
       </div>
     </div>
     <div class="singleDate"><i class="fa fa-calendar"></i> Дата: <?php the_time('d.m.Y'); ?></div>
-    <div class="singleTags"><i class="fa fa-tags"></i> <?php the_tags('Метки: ',' • ',''); ?></div>
+    <div class="singleTags"><i class="fa fa-tags"></i> <?php the_tags('Теги: ',' , ',''); ?></div>
     
     <div class="otherPosts">
-      <h3>Похожие Записи</h3>
+      <h3 class="pageTitle simpleTitle"><span>Похожие Записи</span></h3>
 <!--       <div class="row">
         <div class="onePost">
           <a href="#">

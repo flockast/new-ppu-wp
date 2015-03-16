@@ -18,7 +18,7 @@
 				});
 
 				$('#buttonMore').on('click', function () {
-				    $(this).button('loading')
+				    $(this).addClass('disabled').text('Загрузка...');
 				    base.addMorePosts(this);
 				    
 				});
@@ -65,18 +65,31 @@
 				base.topSlider = $("#carousel").owlCarousel(config);
 			},
 			closeOpenPreview: function(elem) {
-				var text;
+				var text, newHtml;
 
 				$(elem).siblings(".singlePreview").toggle();
-				text = ($(elem).text() == "Скрыть") ? "Показать" : "Скрыть";
-				$(elem).text(text);
+				newHtml = ($(elem).children('span').text() == 'Скрыть') ? '<i class="fa fa-eye"></i> <span>Показать</span>' : '<i class="fa fa-eye-slash"></i> <span>Скрыть</span>';
+				$(elem).html(newHtml);
 			},
 			addMorePosts: function(elem) {
+				var base = this, countPosts,catTitle;
 
-				// ajax
-				setTimeout(function(){
-					$(elem).button('reset');
-				}, 1000);
+				countPosts = $(".onePost").length;
+				catTitle   = ($(elem).attr('data-cat-title')) ? $(elem).attr('data-cat-title') : "";
+
+				$.ajax({
+					type: 'POST',
+					url: '/wp-admin/admin-ajax.php',
+					data: 'action=AddMorePosts&countPosts=' + countPosts + '&catTitle=' + catTitle,
+					success: function(data) {
+						if(data) {
+							$(".listPosts").append(data);
+							$(elem).removeClass('disabled').text('Еще интересных статей');
+						} else {
+							$(elem).addClass('disabled').text('Продолжение следует...');
+						}
+					}
+				});
 			}
 		}
 

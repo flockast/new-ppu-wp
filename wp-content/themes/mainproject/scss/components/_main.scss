@@ -21,14 +21,13 @@ html, body {
 	margin-top: 0;
 	margin-bottom: 22px;
 }
-.simpleTitle {
+.pageTitle {
 	position: relative;
-	text-align: center;
-	margin: 60px 0;
+	margin: 0 0 40px;
 	& > span {
 		position: relative;
 		z-index: 3;
-		padding:0 20px;
+		padding-right: 20px;
 		background: #fff;
 	}
 	&:before {
@@ -39,15 +38,27 @@ html, body {
 		top: 50%;
 		display: block;
 		height: 1px;
-		width: 420px;
 		margin:0 auto;
 		background-color: #ccc;
 		content:" ";
 	}
 }
-h2 {
-	margin: 0 0 40px;
+.simpleTitle {
+	margin: 0 0 60px;
+	text-align: center;
+	&:before {
+		width: 600px;
+	}
+	& > span {
+		padding:0 20px;
+	}
 }
-.alignright { float: right; margin: 20px 0 20px 20px !important;}
-.alignleft { float: left; margin: 20px 20px 20px 0 !important;}
-.aligncenter { display: block; margin: 20px auto !important;}
+a:active, a:hover, a:focus, a {
+	text-decoration: none;
+}
+.navbar-brand {
+	background: url(../img/logo-cube.png) no-repeat 15px 10px;
+	padding-left: 60px;
+	color: #fff !important;
+}
+$post-border-radius: 15px;

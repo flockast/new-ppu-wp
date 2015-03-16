@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="mainContent">
   <input type="hidden" name="data-file" value="page-contacts.php">
-  <h2 class="topTitle">Контакты</h2>
+  <h1 class="pageTitle"><span>Контакты</span></h1>
   <div class="pageContacts">
     <div class="row">
       <div class="ourContacts">
@@ -21,7 +21,7 @@
         <script type="text/javascript" charset="utf-8" src="http://api-maps.yandex.ru/services/constructor/1.0/js/?sid=uZpe5qv-QgNyIn2iHD0QMbQQc7FCJo66&width=100%&height=192"></script>
       </div>  
     </div>
-    <h3 class="simpleTitle"><span>Напишите нам</span></h3>
+    <h3 class="pageTitle simpleTitle"><span>Напишите нам</span></h3>
     <div class="callBackForm">
       <form action="#">
         <div class="form-group"><input type="text" class="form-control" placeholder="Ваше Имя"></div>

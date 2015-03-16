@@ -1,9 +1,13 @@
 .contentCarousel {
 	margin-bottom: 60px;
+	background: url(../img/stripe_bg.png);
+	padding: 15px;
+	overflow: hidden;
+	-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
 	img {
 	    display: block;
 	    width: 100%;
-	    height: auto;
+	    max-height: 300px;
 	}
 	.owl-prev, .owl-next {
 		position: absolute;
