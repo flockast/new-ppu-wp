@@ -3938,10 +3938,18 @@ html, body {
 a:active, a:hover, a:focus, a {
   text-decoration: none; }
 
+.navbar {
+  background: #333; }
+
 .navbar-brand {
   background: url(../img/logo-cube.png) no-repeat 15px 10px;
   padding-left: 60px;
-  color: #fff !important; }
+  color: #fff !important;
+  font-weight: bold;
+  font-size: 26px;
+  letter-spacing: -4px;
+  text-shadow: 0px 4px 1px #000;
+  text-transform: uppercase; }
 
 /* 
  * 	Core Owl Carousel CSS File
