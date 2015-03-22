@@ -1,0 +1,74 @@
+.singlePost {
+	position: relative;
+	.singleHeader {
+		position: relative;
+		.singleImage {
+			img {
+				width: 100%;
+				height: auto;
+				border-radius: $post-border-radius;
+			}
+		}
+		.singleTitle {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			display: block;
+			margin: 0;
+			padding: 20px;
+			text-shadow: 0 1px 1px #000;
+			color: #fff;
+			font-weight: bold;
+		}
+		.singlePreview {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 30px;
+			padding: 20px;
+			background-color: rgba(0,0,0,.5);
+			color: #fff;
+			@media (max-width: $screen-sm-max) {
+				font-size: 12px;
+				line-height: 18px;
+				padding: 20px 20px 0;
+			}
+		}
+		.previewClose {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			display: block;
+			height: 30px;
+			padding-left: 20px;
+			background-color: rgba(0,0,0,.5);
+			border-radius: 0 0 15px 15px;
+			line-height: 30px;
+			color: #fff;
+			font-weight: bold;
+			i {
+				margin-right: 10px;
+			}
+		}		
+	}
+	.singleContent {
+		margin-top: 40px;
+		padding-bottom: 10px;
+		border-bottom: 1px solid silver;
+		margin-bottom: 20px;
+		@include clearfix();
+		img {
+			margin: 20px 20px 20px 0;
+			max-width: 100%;
+			height: auto;
+		}
+		.alignright { float: right; margin: 20px 0 20px 20px;}
+		.alignleft { float: left; margin: 20px 20px 20px 0;}
+		.aligncenter { display: block; margin: 20px auto;}
+	}
+	.singleDate {
+		margin-bottom: 10px;
+	}
+}

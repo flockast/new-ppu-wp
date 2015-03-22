@@ -1,0 +1,1 @@
+<?php if ( get_query_var('pagename') ) { get_template_part('templates/pages/page', get_query_var('pagename') ); die(); } ?>

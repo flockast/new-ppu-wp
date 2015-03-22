@@ -10,10 +10,11 @@
       </div>
     </footer>
 
-    <script src="<?php theme_url(); ?>/js/lib/jquery.min.js"></script>
-    <script src="<?php theme_url(); ?>/js/lib/bootstrap.min.js"></script>
-    <script src="<?php theme_url(); ?>/js/lib/owl.carousel.min.js"></script>
-    <script src="<?php theme_url(); ?>/js/app.js"></script>
+    <script src="<?php theme_url(); ?>/assets/js/lib/jquery.min.js"></script>
+    <script src="<?php theme_url(); ?>/assets/js/lib/bootstrap.min.js"></script>
+    <script src="<?php theme_url(); ?>/assets/js/lib/owl.carousel.min.js"></script>
+    <script src="<?php theme_url(); ?>/assets/js/app.js"></script>
+      <script src="<?php theme_url(); ?>/assets/js/founded.js"></script>
     <?php wp_footer(); ?>
   </body>
 </html>

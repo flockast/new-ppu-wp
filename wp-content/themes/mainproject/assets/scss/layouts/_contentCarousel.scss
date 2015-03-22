@@ -1,0 +1,35 @@
+.contentCarousel {
+	margin-bottom: 60px;
+	background: url(../img/stripe_bg.png);
+	padding: 15px;
+	overflow: hidden;
+	-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+	img {
+	    display: block;
+	    width: 100%;
+	    max-height: 300px;
+	}
+	.owl-prev, .owl-next {
+		position: absolute;
+		top: 50%;
+		width: 48px;
+		height: 48px;
+		margin-top: -24px;
+		background: url(../img/slider-arrows.png);
+		text-indent: -9999px;
+	}
+	.owl-prev {
+		left: 10px;
+		background-position: 0 0px;
+		&:hover {
+			background-position: 0 -48px;
+		}
+	}	
+	.owl-next {
+		right: 10px;
+		background-position: -48px 0px;		
+		&:hover {
+			background-position: -48px -48px;
+		}
+	}
+}

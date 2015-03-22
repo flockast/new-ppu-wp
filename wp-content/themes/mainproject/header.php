@@ -16,7 +16,7 @@
 
     <?php endif; ?>    
 
-    <link href="<?php theme_url(); ?>/css/app.min.css" rel="stylesheet">
+    <link href="<?php theme_url(); ?>/assets/css/app.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -49,7 +49,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">skvadro</a>
+            <a class="navbar-brand" href="/">Cтройкуб<!-- skvadro, granit, строительные рецепты, stroi magazine, шуруп, plintus, строй куб --></a>
           </div>
 
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

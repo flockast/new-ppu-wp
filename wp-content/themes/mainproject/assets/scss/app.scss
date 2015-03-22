@@ -1,0 +1,20 @@
+// Bootsrap
+@import "bootstrap/bootstrap";
+
+// Components
+@import "components/main",
+		"components/owl.carousel",
+		"components/font-awesome";
+
+// Layouts
+@import "layouts/pageSlider",
+		"layouts/pageContent",
+		"layouts/mainContent",
+		"layouts/mainSidebar",
+		"layouts/contentCarousel",
+		"layouts/pageFooter",
+		"layouts/singlePost",
+		"layouts/otherPosts",
+		"layouts/pageProducts",
+		"layouts/pageSingleProduct",
+		"layouts/pageContacts";

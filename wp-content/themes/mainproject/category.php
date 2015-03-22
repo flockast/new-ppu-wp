@@ -6,7 +6,9 @@
 
 	<?php if (have_posts()): ?>
 		<div class="listPosts">
-		  <?php echo get_template_part('templates/articles/article', 'category'); ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+		  		<?php get_template_part('templates/articles/article', 'category'); ?>
+		  	<?php endwhile; wp_reset_query(); ?>
 		</div>
 		<div class="buttonMore btn btn-primary" id="buttonMore" data-cat-title="<?php echo single_cat_title(); ?>">Еще интересных статей</div>
 	<?php endif; ?>

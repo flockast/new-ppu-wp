@@ -1,0 +1,17 @@
+.pageContacts {
+	.simpleTitle {
+		margin-top: 60px;
+	}
+	.ourContacts {
+		@include make-xs-column(5);
+	}
+	.ourMap {
+		@include make-xs-column(7);
+	}
+	@media (max-width: $screen-md-max) {
+		.ourContacts, .ourMap {
+			@include make-xs-column(12);
+			margin-bottom: 20px;
+		}
+	}
+}
