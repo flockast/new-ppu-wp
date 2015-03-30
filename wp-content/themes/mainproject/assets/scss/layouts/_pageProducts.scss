@@ -1,8 +1,9 @@
 .pageProducts {
 	@include make-row();
+	// padding-right: 15px;
 	.oneProduct {
-		@include make-xs-column(4);
-		@media (max-width: $screen-md-max) {
+		@include make-xs-column(3);
+		@media (max-width: $screen-sm-max) {
 			@include make-xs-column(6);
 		}
 		padding-top: 40px;
@@ -10,7 +11,9 @@
 		border-bottom: 1px solid silver;
 		transition: .3s;
 		.productImage {
-			height: 180px;
+			width: 200px;
+			height: 200px;
+			margin: 0 auto;
 			overflow: hidden;
 			text-align: center;
 			img{
@@ -20,14 +23,17 @@
 		}
 		.productTitle {
 			margin-top: 20px;
-			text-align: center;
 			font-size: 18px;
+			font-weight: bold;
 			& > a {
 				color: #222;
 			}
 		}
+		.productPrice {
+
+		}
 		&:hover {
-			background: #dfdfdf;
+			background: #F5F5F5;
 		}
 	}
 }

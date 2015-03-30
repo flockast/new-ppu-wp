@@ -33,3 +33,9 @@ function search_highlighter($search, $html) {
     $newhtml = preg_replace($pattern, $replace, $html);
     return $newhtml;
 }
+
+function print_t($ar) {
+    echo '<pre>';
+    print_r($ar);
+    echo '</pre>';
+}

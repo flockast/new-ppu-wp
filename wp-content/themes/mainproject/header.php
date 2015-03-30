@@ -12,7 +12,10 @@
     <meta property="og:type" content="article" />
     <meta property="og:image" content="<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ); ?>" />
     <meta property="og:url" content="<?php the_permalink(); ?>" />
-    <meta property="og:description" content="<?php the_field('short_story'); ?>" />   
+    <?php 
+      $description = get_the_content();
+    ?>
+    <meta property="og:description" content="<?php echo $description; ?>" />   
 
     <?php endif; ?>    
 
@@ -49,7 +52,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Cтройкуб<!-- skvadro, granit, строительные рецепты, stroi magazine, шуруп, plintus, строй куб --></a>
+            <a class="navbar-brand" href="/">кубострой<!-- Cтройкуб, skvadro, granit, строительные рецепты, stroi magazine, шуруп, plintus, строй куб --></a>
           </div>
 
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

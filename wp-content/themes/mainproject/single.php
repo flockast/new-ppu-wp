@@ -1,3 +1,4 @@
+<?php if ( get_post_type() !== 'post' ) { get_template_part('templates/singles/single', get_post_type() ); die(); } ?>
 <?php get_header(); ?>
 <div class="mainContent">
   <input type="hidden" name="data-file" value="single.php">
@@ -18,20 +19,6 @@
     
     <div class="otherPosts">
       <h3 class="pageTitle simpleTitle"><span>Похожие Записи</span></h3>
-<!--       <div class="row">
-        <div class="onePost">
-          <a href="#">
-            <div class="postImage"><img src="img/content/onepost.jpg" alt=""></div>
-            <div class="postTitle">Название такое интереснейшее, вот так вот самое то</div>
-          </a>
-        </div>
-        <div class="onePost">
-          <a href="#">
-            <div class="postImage"><img src="img/content/onepost.jpg" alt=""></div>
-            <div class="postTitle">Название такое интереснейшее, вот так вот самое то</div>
-          </a>
-        </div>               
-      </div> -->
       <div class="row">
         <?php $post_prev = get_previous_post(); ?>
         <?php if($post_prev): ?>

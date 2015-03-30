@@ -6,7 +6,15 @@
 	.productDescription {
 		@include make-xs-column(7);
 	}
-	@media (max-width: $screen-sm-max) {
+	.productImage {
+		img {
+			max-width: 230px;
+			height: auto;
+		}
+	}
+	.buttonRight {visibility: hidden;}
+	.buttonLeft {visibility: visible;}
+	@media (max-width: $screen-sm-min) {
 		.productImage {
 			@include make-xs-column(12);
 			margin-bottom: 40px;
@@ -14,6 +22,8 @@
 		.productDescription {
 			@include make-xs-column(12);
 		}
+		.buttonRight {visibility: visible;}
+		.buttonLeft {visibility: hidden;}
 	}
 	.price {
 		font-size: 18px;

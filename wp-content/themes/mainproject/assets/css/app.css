@@ -3927,6 +3927,9 @@ html, body {
     background-color: #ccc;
     content: " "; }
 
+@media (max-width: 768px) {
+  .pageTitle:before {
+    background: transparent; } }
 .simpleTitle {
   margin: 0 0 60px;
   text-align: center; }
@@ -3947,7 +3950,7 @@ a:active, a:hover, a:focus, a {
   color: #fff !important;
   font-weight: bold;
   font-size: 26px;
-  letter-spacing: 6px;
+  letter-spacing: 0px;
   text-shadow: 0px 3px 1px #000;
   text-transform: uppercase; }
 
@@ -6181,7 +6184,7 @@ a:active, a:hover, a:focus, a {
   .pageProducts .oneProduct {
     position: relative;
     float: left;
-    width: 33.33333%;
+    width: 25%;
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
@@ -6189,7 +6192,7 @@ a:active, a:hover, a:focus, a {
     padding-bottom: 40px;
     border-bottom: 1px solid silver;
     transition: .3s; }
-    @media (max-width: 1199px) {
+    @media (max-width: 991px) {
       .pageProducts .oneProduct {
         position: relative;
         float: left;
@@ -6198,7 +6201,9 @@ a:active, a:hover, a:focus, a {
         padding-left: 15px;
         padding-right: 15px; } }
     .pageProducts .oneProduct .productImage {
-      height: 180px;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
       overflow: hidden;
       text-align: center; }
       .pageProducts .oneProduct .productImage img {
@@ -6208,12 +6213,12 @@ a:active, a:hover, a:focus, a {
         margin: 0 auto; }
     .pageProducts .oneProduct .productTitle {
       margin-top: 20px;
-      text-align: center;
-      font-size: 18px; }
+      font-size: 18px;
+      font-weight: bold; }
       .pageProducts .oneProduct .productTitle > a {
         color: #222; }
     .pageProducts .oneProduct:hover {
-      background: #dfdfdf; }
+      background: #F5F5F5; }
 
 .pageSingleProduct {
   margin-left: -15px;
@@ -6237,7 +6242,14 @@ a:active, a:hover, a:focus, a {
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px; }
-  @media (max-width: 991px) {
+  .pageSingleProduct .productImage img {
+    max-width: 230px;
+    height: auto; }
+  .pageSingleProduct .buttonRight {
+    visibility: hidden; }
+  .pageSingleProduct .buttonLeft {
+    visibility: visible; }
+  @media (max-width: 768px) {
     .pageSingleProduct .productImage {
       position: relative;
       float: left;
@@ -6252,7 +6264,11 @@ a:active, a:hover, a:focus, a {
       width: 100%;
       min-height: 1px;
       padding-left: 15px;
-      padding-right: 15px; } }
+      padding-right: 15px; }
+    .pageSingleProduct .buttonRight {
+      visibility: visible; }
+    .pageSingleProduct .buttonLeft {
+      visibility: hidden; } }
   .pageSingleProduct .price {
     font-size: 18px; }
     .pageSingleProduct .price .old {
